@@ -1,3 +1,6 @@
+
+
+
 const inputBox  =   document.getElementById('input-box');
 const listcontainer  =   document.getElementById('list-container');
 
@@ -17,7 +20,7 @@ function addTask(){
 
     inputBox.value="";
     saveData();
-}
+};
 
 listcontainer.addEventListener('click',function(e){
     if(e.target.tagName ==="LI"){
@@ -34,7 +37,7 @@ listcontainer.addEventListener('click',function(e){
 
 function saveData(){
     localStorage.setItem("data",listcontainer.innerHTML);
-}
+};
 
 function showTask(){
     listcontainer.innerHTML =   localStorage.getItem("data");
